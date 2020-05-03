@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyLoginPage extends StatefulWidget {
   @override
-  _MyLoginPageState createState() => new _MyLoginPageState();
+  State createState() => new _MyLoginPageState();
 
 }
 
@@ -92,7 +92,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                         shadowColor: Colors.greenAccent,
                         color: Colors.green,
                         elevation: 7.0,
-                        child: GestureDetector(
+                        child: InkWell(
                           onTap: () {
                             Navigator.of(context).pushNamed('/home');
                           },

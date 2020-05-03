@@ -17,14 +17,15 @@ class _SignupPageState extends State<SignupPage> {
               children: <Widget>[
                 Container(
                   padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
-                  child: Text(
-                    'Signup',
-                    style:
-                        TextStyle(fontSize: 80.0, fontWeight: FontWeight.bold),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushNamed('/login');
+                    },
+                    child: Text('Signup',style:TextStyle(fontSize: 80.0, fontWeight: FontWeight.bold),),
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.fromLTRB(300.0, 110.0, 0.0, 0.0),
+                  padding: EdgeInsets.fromLTRB(270.0, 110.0, 0.0, 0.0),
                   child: Text(
                     '.',
                     style: TextStyle(

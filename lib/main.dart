@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kimantara/screens/home_page.dart';
 import 'package:kimantara/screens/login_screen.dart';
 import 'package:kimantara/screens/sign_up.dart';
 
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder> {
         '/signup': (BuildContext context) => new SignupPage(),
+        '/home': (BuildContext context) => new HomePage(),
+        '/login': (BuildContext context) => new MyLoginPage(),
       },
     );
   }
