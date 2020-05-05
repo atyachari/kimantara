@@ -84,16 +84,12 @@ class _SignupPageState extends State<SignupPage> {
                         shadowColor: Colors.greenAccent,
                         color: Colors.green,
                         elevation: 7.0,
-                        child: GestureDetector(
-                          onTap: () {},
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).pushNamed('/login');
+                          },
                           child: Center(
-                            child: Text(
-                              'SIGNUP',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Montserrat'),
-                            ),
+                            child: Text('SIGNUP',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontFamily: 'Montserrat'),),
                           ),
                         ),
                       )),
