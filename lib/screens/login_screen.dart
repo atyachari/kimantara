@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyLoginPage extends StatefulWidget {
   @override
-  State createState() => new _MyLoginPageState();
+  _MyLoginPageState createState() => new _MyLoginPageState();
 
 }
 

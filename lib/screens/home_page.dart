@@ -17,27 +17,15 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  static CircleAvatar calendarIcon() {
-    return CircleAvatar(
-      radius: 25.0,
-      backgroundColor: Colors.brown[200],
-      child: Icon(
-        Icons.calendar_today,
-        size: 20.0,
-        color: Colors.white,
-      ),
-    );
-  }
-
   static CircleAvatar scanIcon() {
     return CircleAvatar(
       radius: 25.0,
       backgroundColor: Colors.green[900],
-      child: Icon(
-        Icons.scanner,
-        size: 20.0,
-        color: Colors.white,
-      ),
+        child: Icon(
+          Icons.scanner,
+          size: 20.0,
+          color: Colors.white,
+        ),
     );
   }
 
@@ -45,7 +33,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: Colors.blue[50],
+      backgroundColor: Colors.green[100],
       body: SafeArea(
         child: Column(
           children: <Widget>[
@@ -91,19 +79,14 @@ class HomePage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Container(
-                                child: Text(
-                                  'Vipul Lohani',
+                                child: Text('Ratnadeep Supermarket',
                                   textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                    fontSize: 22.0,
-                                    color: Colors.black87,
-                                    fontWeight: FontWeight.w800,
-                                  ),
+                                  style: TextStyle(fontSize: 22.0,color: Colors.black87,fontWeight: FontWeight.w800,),
                                 ),
                               ),
                               Container(
                                 child: Text(
-                                  'AMTS',
+                                  'Kondapur, Hyderabad',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                     fontSize: 16.0,
@@ -129,45 +112,25 @@ class HomePage extends StatelessWidget {
                           horizontal: 20.0, vertical: 10.0),
                       child: Column(
                         children: <Widget>[
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              subheading('My Tasks'),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => null),
-                                  );
-                                },
-                                child: calendarIcon(),
-                              ),
-                            ],
-                          ),
                           SizedBox(height: 15.0),
-                          TaskColumn(
-                            icon: Icons.alarm,
-                            iconBackgroundColor: Colors.blueGrey,
-                            title: 'To Do',
-                            subtitle: '5 tasks now. 1 started',
+                          InkWell(
+                              onTap: () { Navigator.of(context).pushNamed('/login'); },
+                              child: TaskColumn(
+                              icon: Icons.person_pin_circle,
+                              iconBackgroundColor: Colors.blueGrey,
+                              title: 'Your bookings',
+                              subtitle: 'No slots booked at the moment',
+                            ),
                           ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
-                          TaskColumn(
-                            icon: Icons.blur_circular,
-                            iconBackgroundColor: Colors.blueGrey,
-                            title: 'In Progress',
-                            subtitle: '1 tasks now. 1 started',
-                          ),
-                          SizedBox(height: 15.0),
-                          TaskColumn(
-                            icon: Icons.check_circle_outline,
-                            iconBackgroundColor: Colors.blueGrey,
-                            title: 'Done',
-                            subtitle: '18 tasks now. 13 started',
+                          SizedBox(height: 15.0,),
+                          InkWell(
+                            onTap: () { Navigator.of(context).pushNamed('/login'); },
+                            child: TaskColumn(
+                              icon: Icons.check,
+                              iconBackgroundColor: Colors.blueGrey,
+                              title: 'Mark your entry',
+                              subtitle: 'No slots booked at the moment',
+                            )
                           ),
                         ],
                       ),
@@ -179,39 +142,39 @@ class HomePage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          subheading("Today's Status"),
+                          subheading("Book your slot.."),
                           SizedBox(height: 5.0),
                           Row(
                             children: <Widget>[
                               ActiveProjectsCard(
-                                cardColor: Colors.blue[200],
-                                loadingPercent: 0.25,
-                                title: 'Total Strength today',
-                                subtitle: '1230 employees',
+                                cardColor: Colors.green[900],
+                                loadingPercent: 0.90,
+                                title: '10;00 - 10:30',
+                                subtitle: '9 bookings',
                               ),
                               SizedBox(width: 20.0),
                               ActiveProjectsCard(
-                                cardColor: Colors.blue[200],
-                                loadingPercent: 0.6,
-                                title: "Next week's booking",
-                                subtitle: '343 slots booked',
+                                cardColor: Colors.green[900],
+                                loadingPercent: 0.3,
+                                title: "10:30 - 11:00",
+                                subtitle: '3 bookings',
                               ),
                             ],
                           ),
                           Row(
                             children: <Widget>[
                               ActiveProjectsCard(
-                                cardColor: Colors.blue[200],
-                                loadingPercent: 0.45,
-                                title: 'Cafeteria Crowd Status',
-                                subtitle: '156 people already arrived',
+                                cardColor: Colors.green[900],
+                                loadingPercent: 0.20,
+                                title: '11:30 - 12:00',
+                                subtitle: '2 bookings',
                               ),
                               SizedBox(width: 20.0),
                               ActiveProjectsCard(
-                                cardColor: Colors.blue[200],
-                                loadingPercent: 0.9,
-                                title: 'Recovered Cases in India',
-                                subtitle: '15,344 cases recovered',
+                                cardColor: Colors.green[900],
+                                loadingPercent: 0.0,
+                                title: '14:00 - 14:30',
+                                subtitle: 'No booking',
                               ),
                             ],
                           ),
