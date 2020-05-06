@@ -28,7 +28,9 @@ class _CartManager extends State<CartManager> {
                       new Text("Booked Slots", style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.bold))
                     ),
                     new Container(margin: EdgeInsets.only(bottom: 10), height: _gridSize*0.60, child:
-                      new ListView.builder(itemCount: snapshot.data.orders.length, itemBuilder: (context, index ){
+                      new ListView.builder(
+                        itemCount: snapshot.data.orders.length, 
+                        itemBuilder: (context, index ){
                         return Dismissible(
                           background: Container(color: Colors.transparent),
                           key: Key(snapshot.data.orders[index].id.toString()),

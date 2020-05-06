@@ -7,7 +7,7 @@ class Order {
   int _id;
   String _time;
 
-  Order(this._product, this._quantity, this._id);
+  Order(this._product, this._quantity, this._id, this._time);
 
   int get id => _id;
 

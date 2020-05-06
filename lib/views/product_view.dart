@@ -106,7 +106,7 @@ class _ProductView extends State<ProductView> {
                         minWidth: 500.0,
                         child: new RaisedButton(color: Colors.amber, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)), padding: EdgeInsets.all(20),
                           onPressed: (){
-                            _cartBloc.addOrderToCart(widget.product, _quantity);
+                            _cartBloc.addOrderToCart(widget.product, _quantity, "10:00AM - 10:30AM");
                             // Fluttertoast.showToast(
                             //  msg: "This is Center Short Toast",
                             //   toastLength: Toast.LENGTH_LONG,
@@ -129,7 +129,7 @@ class _ProductView extends State<ProductView> {
                         minWidth: 500.0,
                         child: new RaisedButton(color: Colors.amber, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)), padding: EdgeInsets.all(20),
                           onPressed: (){
-                            _cartBloc.addOrderToCart(widget.product, _quantity);
+                            _cartBloc.addOrderToCart(widget.product, _quantity, "10:30AM - 11:00AM");
                             Navigator.of(context).pop();
                           },
                           child: new Text("10:30AM - 11:00AM", style: TextStyle(fontWeight: FontWeight.bold))
@@ -140,7 +140,7 @@ class _ProductView extends State<ProductView> {
                         minWidth: 500.0,
                         child: new RaisedButton(color: Colors.amber, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)), padding: EdgeInsets.all(20),
                           onPressed: (){
-                            _cartBloc.addOrderToCart(widget.product, _quantity);
+                            _cartBloc.addOrderToCart(widget.product, _quantity, "11:00AM - 11:30AM");
                             Navigator.of(context).pop();
                           },
                           child: new Text("11:00AM - 11:30AM", style: TextStyle(fontWeight: FontWeight.bold))
@@ -151,7 +151,7 @@ class _ProductView extends State<ProductView> {
                         minWidth: 500.0,
                         child: new RaisedButton(color: Colors.amber, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)), padding: EdgeInsets.all(20),
                           onPressed: (){
-                            _cartBloc.addOrderToCart(widget.product, _quantity);
+                            _cartBloc.addOrderToCart(widget.product, _quantity, "1:00PM - 1:30PM");
                             Navigator.of(context).pop();
                           },
                           child: new Text("1:00PM - 1:30PM", style: TextStyle(fontWeight: FontWeight.bold))
@@ -162,7 +162,7 @@ class _ProductView extends State<ProductView> {
                         minWidth: 500.0,
                         child: new RaisedButton(color: Colors.amber, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(60)), padding: EdgeInsets.all(20),
                           onPressed: (){
-                            _cartBloc.addOrderToCart(widget.product, _quantity);
+                            _cartBloc.addOrderToCart(widget.product, _quantity, "1:30PM - 2:00PM");
                             Navigator.of(context).pop();
                           },
                           child: new Text("1:30PM - 2:00PM", style: TextStyle(fontWeight: FontWeight.bold))

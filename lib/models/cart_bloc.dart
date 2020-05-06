@@ -38,8 +38,8 @@ class CartBloc{
     _publishSubjectOrder.sink.add(_lastOrder);
   }
 
-  void addOrderToCart(Product product, int quantity){
-    _lastOrder = new Order(product, quantity, _orderId++);
+  void addOrderToCart(Product product, int quantity, String time){
+    _lastOrder = new Order(product, quantity, _orderId++, time);
     _currentCart.addOrder(_lastOrder);
     _updateLastOrder();
     _updateCart();

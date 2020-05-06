@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:kimantara/models/order.dart';
 
 class OrderWidget extends StatelessWidget {
-
   final Order _order;
   final double _gridSize;
   OrderWidget(this._order, this._gridSize);
@@ -23,7 +22,7 @@ class OrderWidget extends StatelessWidget {
         )
       ),
       new Flexible(flex: 1, child:
-        new Text("\$${this._order.time}", style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold))
+        new Text("${this._order.time}", style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold))
       )
     ]);
   }

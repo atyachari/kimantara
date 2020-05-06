@@ -94,7 +94,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                         elevation: 7.0,
                         child: InkWell(
                           onTap: () {
-                            Navigator.of(context).pushNamed('/home');
+                            Navigator.of(context).pushNamed('/storelist');
                           },
                           child: Center(
                             child: Text('LOGIN',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontFamily: 'Montserrat'),),
