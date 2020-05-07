@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Kimantara',
-      // home: MyLoginPage(),
-      home: MyHomePage(),
+      home: MyLoginPage(),
+      // home: MyHomePage(),
       // home: ListSongs(),
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder> {
