@@ -66,3 +66,21 @@ class _CartManager extends State<CartManager> {
     );
   }
 }
+
+class _CartMenu extends State<CategoryDropMenu> {
+
+  String dropdownValue = "Available Slots";
+
+  @override
+  Widget build(BuildContext context){
+    return new Text(
+      "Available stores near you",
+      style: TextStyle(
+        fontFamily: 'Montserrat',
+        fontWeight: FontWeight.bold,
+        fontSize: 25,
+      ),
+    );
+  }
+
+}
