@@ -5,6 +5,7 @@ class SignupPage extends StatefulWidget {
   _SignupPageState createState() => _SignupPageState();
 }
 
+// signup class
 class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
